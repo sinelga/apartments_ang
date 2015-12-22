@@ -19,12 +19,11 @@ interface Hero {
   `
 })
  
-
-    
+   
 export class AppComponent {
         
   public title = 'Tour of Heroes';
-  public hero = 'Windstorm';
+//  public hero = 'Windstorm';
     
    public hero: Hero = {
   id: 1,
