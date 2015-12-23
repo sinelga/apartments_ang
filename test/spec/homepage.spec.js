@@ -2,12 +2,28 @@ describe('angularjs homepage', function() {
 	
 
   it('should greet the named user', function() {
-//	  browser.ignoreSynchronization = true;
-    browser.driver.get('http://localhost:3000');
+	  browser.ignoreSynchronization = true;
+    browser.get('http://localhost:3000');
 
 //    element(by.model('yourName')).sendKeys('Julie');
     
-    expect(browser.driver.getTitle()).toEqual('Super Calculator');
+    expect(browser.getTitle()).toEqual('Apartments');
+//    expect(browser.getTitle()).toEqual('Apartments');
+//    element(by.model('hero.name')).sendKeys('A value aa');
+    
+    element.all(by.tagName('input')).first().isPresent().then(function(result) {
+
+		if (result) {
+			var inputel = element.all(by.tagName('input')).first();
+			inputel.clear();
+			inputel.sendKeys('my text');
+    	
+    	
+		}
+    	
+    	
+    });
+  
 
 //    var greeting = element(by.binding('yourName'));
 //

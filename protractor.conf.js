@@ -15,12 +15,7 @@
 //    'resolution' : '1024x768'
 //  },
 //
-//  // Browserstack's selenium server address
-//  seleniumAddress: 'http://hub.browserstack.com/wd/hub',
-//
-//  // Pattern for finding test spec files
-//  specs: ['test/**/*.spec.js']
-//}
+
 
 
 exports.config = {
@@ -30,6 +25,7 @@ exports.config = {
 		  // Capabilities to be passed to the webdriver instance.
 		  capabilities: {
 		    'browserName': 'internet explorer',
+		    'browser_version' : '10',
 //		    'browserstack.tunnel': 'true',
 		    'browserstack.local' : 'true',
 		    'browserstack.debug': 'true',
