@@ -29,7 +29,7 @@ System.register(['angular2/core', './hero-detail.component', './hero.service'], 
                 }
                 AppComponent.prototype.getHeroes = function () {
                     var _this = this;
-                    this._heroService.getHeroesSlowly().then(function (heroes) { return _this.heroes = heroes; });
+                    this._heroService.getHeroes().then(function (heroes) { return _this.heroes = heroes; });
                 };
                 AppComponent.prototype.ngOnInit = function () {
                     this.getHeroes();
