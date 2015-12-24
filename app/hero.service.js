@@ -28,7 +28,7 @@ System.register(['./mock-heroes', 'angular2/core'], function(exports_1) {
                 // See the "Take it slow" appendix
                 HeroService.prototype.getHeroesSlowly = function () {
                     return new Promise(function (resolve) {
-                        return setTimeout(function () { return resolve(mock_heroes_1.HEROES); }, 500);
+                        return setTimeout(function () { return resolve(mock_heroes_1.HEROES); }, 1000);
                     } // 2 seconds
                      // 2 seconds
                     );

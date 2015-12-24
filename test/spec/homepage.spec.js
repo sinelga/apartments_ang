@@ -1,37 +1,35 @@
 describe('angularjs homepage', function() {
 	
-
   it('should greet the named user', function() {
 	  browser.ignoreSynchronization = true;
     browser.get('http://localhost:3000');
-
-//    element(by.model('yourName')).sendKeys('Julie');
     
     expect(browser.getTitle()).toEqual('Apartments');
-//    expect(browser.getTitle()).toEqual('Apartments');
-//    element(by.model('hero.name')).sendKeys('A value aa');
-    
+    browser.sleep(3000);
     element.all(by.css('.badge')).first().isPresent().then(function(result) {
 
 		if (result) {
 			var inputel = element.all(by.css('.badge')).first();
 
-			browser.sleep(1000);
+			browser.sleep(2000);
 			inputel.click();			
-			browser.sleep(1000);
+			browser.sleep(2000);
 			expect(element.all(by.tagName('h2')).get(1).getText()).toEqual('Mr. Nice details!');
     	   	
 		}
-    	
-    	
+    	    	
     });
-  
 
-//    var greeting = element(by.binding('yourName'));
-//
-//    expect(greeting.getText()).toEqual('Hello Julie!');
   });
 
+  
+  
+  
+  
+  
+  
+  
+  
 //  describe('todo list', function() {
 //    var todoList;
 //

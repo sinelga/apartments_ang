@@ -1,22 +1,4 @@
-//exports.config = {
-//  capabilities: {
-//    'browserstack.user' : process.env.BROWSERSTACK_USER,
-//    'browserstack.key' : process.env.BROWSERSTACK_KEY,
-//
-//    // Needed for testing localhost
-//    'browserstack.local' : 'true',
-//
-//    // Settings for the browser you want to test
-//    // (check docs for difference between `browser` and `browserName`
-//    'browser' : 'Chrome',
-//    'browser_version' : '36.0',
-//    'os' : 'OS X',
-//    'os_version' : 'Mavericks',
-//    'resolution' : '1024x768'
-//  },
-//
-
-
+'use strict';
 
 exports.config = {
 		  // The address of a running selenium server.
@@ -26,7 +8,6 @@ exports.config = {
 		  capabilities: {
 		    'browserName': 'internet explorer',
 		    'browser_version' : '10',
-//		    'browserstack.tunnel': 'true',
 		    'browserstack.local' : 'true',
 		    'browserstack.debug': 'true',
 		    'browserstack.user' : process.env.BROWSERSTACK_USERNAME,
@@ -44,4 +25,73 @@ exports.config = {
 		    showColors: true,
 		    defaultTimeoutInterval: 30000
 		  }
-		};
+//		};
+
+
+//var browserstackUser = process.env.BROWSERSTACK_USERNAME;
+//var browserstackKey = process.env.BROWSERSTACK_KEY;
+//
+//exports.config = {
+//    multiCapabilities: [
+//        {
+//            'browserstack.user': browserstackUser,
+//            'browserstack.key':browserstackKey ,
+//            'browserstack.local': 'true',
+//            'browserstack.debug': 'true',
+//            'browserName': 'Chrome',
+//            'os': 'Windows',
+//            'os_version': '8',
+//            specs: [
+//                    'test/**/*.spec.js'
+//            ]
+//        },
+//        {
+//            'browserstack.user': browserstackUser,
+//            'browserstack.key': browserstackKey,
+//		    'browserName': 'internet explorer',
+//		    'browser_version' : '10',
+//            'browserstack.local': 'true',
+//            'browserstack.debug': 'true',
+//
+//            specs: [
+//                    'test/**/*.spec.js'
+//            ]
+//        }
+//    ],
+//
+//    maxSessions: 2,
+//    allScriptsTimeout: 300000,
+//
+//    // Browserstack's selenium server address
+//    seleniumAddress: 'http://hub.browserstack.com/wd/hub',
+//    
+//  jasmineNodeOpts: {
+//    showColors: true,
+//    defaultTimeoutInterval: 3600000
+//  }
+
+//    framework: 'jasmine',
+//
+//    allScriptsTimeout: 300000,
+//
+//    baseUrl: 'http://localhost:9001',
+//
+//    onPrepare: function () {
+//        require('jasmine-reporters');
+//        var capsPromise = browser.getCapabilities();
+//        capsPromise.then(function (caps) {
+//            var browserName = caps.caps_.browserName.toUpperCase();
+//            var browserVersion = caps.caps_.version;
+//            var prePendStr = browserName + "-" + browserVersion + "-";
+//            jasmine.getEnv().addReporter(new
+//                jasmine.JUnitXmlReporter("test-results", true, true, prePendStr));
+//        });
+//    },
+//
+//    jasmineNodeOpts: {
+//        showColors: true,
+//        isVerbose: true,
+//        includeStackTrace: true,
+//        defaultTimeoutInterval: 3600000
+//    }
+};
