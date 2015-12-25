@@ -1,74 +1,74 @@
 'use strict';
 
-exports.config = {
-		  // The address of a running selenium server.
-		  seleniumAddress: 'http://hub.browserstack.com/wd/hub',
-
-		  // Capabilities to be passed to the webdriver instance.
-		  capabilities: {
-		    'browserName': 'internet explorer',
-		    'browser_version' : '10',
-		    'browserstack.local' : 'true',
-		    'browserstack.debug': 'true',
-		    'browserstack.user' : process.env.BROWSERSTACK_USERNAME,
-		    'browserstack.key': process.env.BROWSERSTACK_KEY
-		  },
-
-		  // Spec patterns are relative to the current working directly when
-		  // protractor is called.
-		  specs: [
-		    'test/**/*.spec.js'
-		  ],
-
-		  // Options to be passed to Jasmine-node.
-		  jasmineNodeOpts: {
-		    showColors: true,
-		    defaultTimeoutInterval: 30000
-		  }
+//exports.config = {
+//		  // The address of a running selenium server.
+//		  seleniumAddress: 'http://hub.browserstack.com/wd/hub',
+//
+//		  // Capabilities to be passed to the webdriver instance.
+//		  capabilities: {
+//		    'browserName': 'internet explorer',
+//		    'browser_version' : '10',
+//		    'browserstack.local' : 'true',
+//		    'browserstack.debug': 'true',
+//		    'browserstack.user' : process.env.BROWSERSTACK_USERNAME,
+//		    'browserstack.key': process.env.BROWSERSTACK_KEY
+//		  },
+//
+//		  // Spec patterns are relative to the current working directly when
+//		  // protractor is called.
+//		  specs: [
+//		    'test/**/*.spec.js'
+//		  ],
+//
+//		  // Options to be passed to Jasmine-node.
+//		  jasmineNodeOpts: {
+//		    showColors: true,
+//		    defaultTimeoutInterval: 30000
+//		  }
 //		};
 
 
-//var browserstackUser = process.env.BROWSERSTACK_USERNAME;
-//var browserstackKey = process.env.BROWSERSTACK_KEY;
-//
-//exports.config = {
-//    multiCapabilities: [
-//        {
-//            'browserstack.user': browserstackUser,
-//            'browserstack.key':browserstackKey ,
-//            'browserstack.local': 'true',
-//            'browserstack.debug': 'true',
-//            'browserName': 'Chrome',
-//            'os': 'Windows',
+var browserstackUser = process.env.BROWSERSTACK_USERNAME;
+var browserstackKey = process.env.BROWSERSTACK_KEY;
+
+exports.config = {
+    multiCapabilities: [
+        {
+            'browserstack.user': browserstackUser,
+            'browserstack.key':browserstackKey ,
+            'browserstack.local': 'true',
+            'browserstack.debug': 'true',
+            'browserName': 'Windows Phone',
+//            'os': 'Windows Phone',
 //            'os_version': '8',
-//            specs: [
-//                    'test/**/*.spec.js'
-//            ]
-//        },
-//        {
-//            'browserstack.user': browserstackUser,
-//            'browserstack.key': browserstackKey,
-//		    'browserName': 'internet explorer',
-//		    'browser_version' : '10',
-//            'browserstack.local': 'true',
-//            'browserstack.debug': 'true',
-//
-//            specs: [
-//                    'test/**/*.spec.js'
-//            ]
-//        }
-//    ],
-//
-//    maxSessions: 2,
-//    allScriptsTimeout: 300000,
-//
-//    // Browserstack's selenium server address
-//    seleniumAddress: 'http://hub.browserstack.com/wd/hub',
-//    
-//  jasmineNodeOpts: {
-//    showColors: true,
-//    defaultTimeoutInterval: 3600000
-//  }
+            specs: [
+                    'test/**/*.spec.js'
+            ]
+        },
+        {
+            'browserstack.user': browserstackUser,
+            'browserstack.key': browserstackKey,
+		    'browserName': 'internet explorer',
+		    'browser_version' : '10',
+            'browserstack.local': 'true',
+            'browserstack.debug': 'true',
+
+            specs: [
+                    'test/**/*.spec.js'
+            ]
+        }
+    ],
+
+    maxSessions: 2,
+    allScriptsTimeout: 300000,
+
+    // Browserstack's selenium server address
+    seleniumAddress: 'http://hub.browserstack.com/wd/hub',
+    
+  jasmineNodeOpts: {
+    showColors: true,
+    defaultTimeoutInterval: 3600000
+  }
 
 //    framework: 'jasmine',
 //
