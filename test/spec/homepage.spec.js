@@ -4,21 +4,34 @@ describe('angularjs homepage', function() {
 	  browser.ignoreSynchronization = true;
     browser.get('http://localhost:3000');
     
-    expect(browser.getTitle()).toEqual('Apartments');
+    expect(browser.getTitle()).toEqual('Router Sample');
     browser.sleep(3000);
-    element.all(by.css('.badge')).first().isPresent().then(function(result) {
-
-		if (result) {
-			var inputel = element.all(by.css('.badge')).first();
-
-			browser.sleep(2000);
-			inputel.click();			
-			browser.sleep(2000);
-			expect(element.all(by.tagName('h2')).get(1).getText()).toEqual('Mr. Nice details!');
-    	   	
-		}
-    	    	
-    });
+    
+    expect(element.all(by.tagName('a')).get(0).getText()).toEqual('Crisis Center');
+    
+    var menu = element.all(by.tagName('a'));
+    expect(menu.get(0).getText()).toEqual('Crisis Center');
+    
+    menu.get(0).getText().click();
+//    expect(element(by.tagName('h2').getText())).toEqual('CRISIS CENTER');
+    
+    expect(element.all(by.tagName('h2')).get(0).getText()).toEqual('CRISIS CENTER');
+    
+    
+    
+//    element.all(by.css('.badge')).first().isPresent().then(function(result) {
+//
+//		if (result) {
+//			var inputel = element.all(by.css('.badge')).first();
+//
+//			browser.sleep(2000);
+////			inputel.click();			
+////			browser.sleep(2000);
+////			expect(element.all(by.tagName('h2')).get(1).getText()).toEqual('Mr. Nice details!');
+//    	   	
+//		}
+//    	    	
+//    });
 
   });
 

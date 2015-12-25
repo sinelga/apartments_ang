@@ -38,7 +38,7 @@ exports.config = {
             'browserstack.key':browserstackKey ,
             'browserstack.local': 'true',
             'browserstack.debug': 'true',
-            'browserName': 'Windows Phone',
+            'browserName': 'Chrome',
 //            'os': 'Windows Phone',
 //            'os_version': '8',
             specs: [
