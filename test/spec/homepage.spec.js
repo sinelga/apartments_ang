@@ -7,31 +7,30 @@ describe('angularjs homepage', function() {
     expect(browser.getTitle()).toEqual('Router Sample');
     browser.sleep(3000);
     
-    expect(element.all(by.tagName('a')).get(0).getText()).toEqual('Crisis Center');
+//    expect(element.all(by.tagName('a')).get(1).getText()).toEqual('Heroes');
     
     var menu = element.all(by.tagName('a'));
-    expect(menu.get(0).getText()).toEqual('Crisis Center');
+    expect(menu.get(1).getText()).toEqual('Heroes');
     
-    menu.get(0).getText().click();
+    
+    menu.get(1).getText().click();
 //    expect(element(by.tagName('h2').getText())).toEqual('CRISIS CENTER');
     
-    expect(element.all(by.tagName('h2')).get(0).getText()).toEqual('CRISIS CENTER');
-    
-    
-    
-//    element.all(by.css('.badge')).first().isPresent().then(function(result) {
-//
-//		if (result) {
-//			var inputel = element.all(by.css('.badge')).first();
-//
-//			browser.sleep(2000);
-////			inputel.click();			
-////			browser.sleep(2000);
-////			expect(element.all(by.tagName('h2')).get(1).getText()).toEqual('Mr. Nice details!');
-//    	   	
-//		}
-//    	    	
-//    });
+    expect(element.all(by.tagName('h2')).get(0).getText()).toEqual('HEROES');
+            
+    element.all(by.css('.badge')).first().isPresent().then(function(result) {
+
+		if (result) {
+			var inputel = element.all(by.css('.badge')).first();
+
+			browser.sleep(2000);
+			inputel.click();			
+			browser.sleep(2000);
+			expect(element.all(by.tagName('h3')).get(0).getText()).toEqual('"Mr. Nice"');
+    	   	
+		}
+    	    	
+    });
 
   });
 
