@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/router', './crisis-list.component', './hero-list.component'], function(exports_1) {
+System.register(['angular2/core', 'angular2/router', './crisis-list.component', './heroes/hero-list.component', './heroes/hero-detail.component'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,7 +8,7 @@ System.register(['angular2/core', 'angular2/router', './crisis-list.component', 
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, crisis_list_component_1, hero_list_component_1;
+    var core_1, router_1, crisis_list_component_1, hero_list_component_1, hero_detail_component_1;
     var AppComponent;
     return {
         setters:[
@@ -23,6 +23,9 @@ System.register(['angular2/core', 'angular2/router', './crisis-list.component', 
             },
             function (hero_list_component_1_1) {
                 hero_list_component_1 = hero_list_component_1_1;
+            },
+            function (hero_detail_component_1_1) {
+                hero_detail_component_1 = hero_detail_component_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
@@ -36,7 +39,8 @@ System.register(['angular2/core', 'angular2/router', './crisis-list.component', 
                     }),
                     router_1.RouteConfig([
                         { path: '/crisis-center', name: 'CrisisCenter', component: crisis_list_component_1.CrisisListComponent },
-                        { path: '/heroes', name: 'Heroes', component: hero_list_component_1.HeroListComponent }
+                        { path: '/heroes', name: 'Heroes', component: hero_list_component_1.HeroListComponent },
+                        { path: '/hero/:id', name: 'HeroDetail', component: hero_detail_component_1.HeroDetailComponent }
                     ]), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
