@@ -38,7 +38,8 @@ exports.config = {
             'browserstack.key':browserstackKey ,
             'browserstack.local': 'true',
             'browserstack.debug': 'true',
-            'browserName': 'Chrome',
+            'browserName': 'internet explorer',
+            'browser_version' : '10',
 //            'os': 'Windows Phone',
 //            'os_version': '8',
             specs: [
@@ -49,17 +50,27 @@ exports.config = {
             'browserstack.user': browserstackUser,
             'browserstack.key': browserstackKey,
 		    'browserName': 'internet explorer',
-		    'browser_version' : '10',
+		    'browser_version' : '11',
             'browserstack.local': 'true',
             'browserstack.debug': 'true',
-
+            specs: [
+                    'test/**/*.spec.js'
+            ]
+        },
+        {
+            'browserstack.user': browserstackUser,
+            'browserstack.key': browserstackKey,
+		    'browserName': 'safari',
+//		    'browser_version' : '11',
+            'browserstack.local': 'true',
+            'browserstack.debug': 'true',
             specs: [
                     'test/**/*.spec.js'
             ]
         }
     ],
 
-    maxSessions: 2,
+    maxSessions: 3,
     allScriptsTimeout: 300000,
 
     // Browserstack's selenium server address

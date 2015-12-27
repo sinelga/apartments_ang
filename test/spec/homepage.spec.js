@@ -5,15 +5,14 @@ describe('angularjs homepage', function() {
     browser.get('http://localhost:3000');
     
     expect(browser.getTitle()).toEqual('Router Sample');
-    browser.sleep(3000);
-    
-//    expect(element.all(by.tagName('a')).get(1).getText()).toEqual('Heroes');
+    browser.sleep(1000);
     
     var menu = element.all(by.tagName('a'));
     expect(menu.get(1).getText()).toEqual('Heroes');
     
     
     menu.get(1).getText().click();
+    browser.sleep(1000);
 //    expect(element(by.tagName('h2').getText())).toEqual('CRISIS CENTER');
     
     expect(element.all(by.tagName('h2')).get(0).getText()).toEqual('HEROES');
